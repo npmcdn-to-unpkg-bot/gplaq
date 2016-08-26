@@ -27,24 +27,30 @@
         <div class="col-md-9 col-lg-10">
             <div class="corpo_ordem" ng-class="mudarCor(enem.dataprevista)">
                 <div>
-                    <label for="">Rota:</label>
                     <label ng-bind="enem.rota" class="rotas"></label>
                 </div>
                 <div>
-                    <label ng-bind="enem.destinatario" class="destinatario"></label>
+                    <table class="table">
+                        <tr>
+                            <th><label ng-bind="enem.destinatario" class="destinatario"></label></th>
+                            <th><label ng-bind="enem.cidade"></label></th>
+                            <th><label ng-bind="enem.dataprevista | diadasemana "></label></th>
+                        </tr>
+                    </table>
+
                 </div>
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="col-md-1 bloco" ng-repeat="r in painel" ng-class="trocarCor(r)">
-                <div class="rota">{{r.rota}}</div>
-                <div>Total: {{r.total}}</div>
-                <div>Triado: {{r.conferidos}}</div>
+    <!--<div class="row">-->
+        <!--<div class="col-md-12">-->
+            <!--<div class="col-md-1 bloco" ng-repeat="r in painel" ng-class="trocarCor(r)">-->
+                <!--<div class="rota">{{r.rota}}</div>-->
+                <!--<div>Total: {{r.total}}</div>-->
+                <!--<div>Triado: {{r.conferidos}}</div>-->
 
-            </div>
+            <!--</div>-->
 
-        </div>
-    </div>
+        <!--</div>-->
+    <!--</div>-->
 </div>

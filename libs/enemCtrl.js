@@ -4,7 +4,7 @@
 angular.module('appcorreios')
     .controller('enemCtrl', function ($scope, $http, $anchorScroll) {
         $scope.lista = [];
-        $scope.enem = {};
+        $scope.enem = {'rota':0, 'destinatario': ""};
         $scope.restante = 0;
 
         $scope.qtde = function () {
@@ -63,7 +63,7 @@ angular.module('appcorreios')
         }
         $scope.mudarCor = function (data) {
             if(data == '2016-11-05'){
-                return 'corazul';
+                return 'corverde';
             }else{
                 return 'corvermelho'
             }

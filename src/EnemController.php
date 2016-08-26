@@ -58,9 +58,10 @@ class EnemController
 
     function gerarPainel()
     {
-        $dia = $_POST['data'];
-        $result = $this->dao->gerarPainel($dia);
+//        $dia = $_POST['data'];
+        $sabado = $this->dao->gerarPainel('2016-11-05');
+        $domingo = $this->dao->gerarPainel('2016-11-06');
 
-        echo json_encode(array('painel'=>$result));
+        echo json_encode(array('sabado'=>$sabado, 'domingo'=>$domingo));
     }
 }

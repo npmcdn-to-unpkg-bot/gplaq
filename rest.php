@@ -27,3 +27,8 @@ $control = new $classe();
 
 $control->$metodo();
 
+//$dao = new \GPLAC\EnemDAO();
+//$sabado = $dao->gerarPainel('2016-11-05');
+//$domingo = $dao->gerarPainel('2016-11-06');
+//echo '<pre>';
+//var_dump(array('sabado'=>$sabado, 'domingo'=>$domingo));

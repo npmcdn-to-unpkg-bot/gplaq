@@ -56,18 +56,15 @@ function cel () {
 function data ($timeout) {
     return function (input) {
         if(!input || typeof(input) == 'object') return input;
-        // var dia = input.substring(8, 10);
-        // var mes = input.substring(5, 7);
-        // var ano = input.substring(0, 4);
-        // data_banco = new Date(ano,mes-1,dia);
-        // hoje = new Date();
-        // if(data_banco < hoje){
-        //     console.log('de ontem');
-        // }
-        // console.log(hoje + " / " + data_banco);
-
-        // var data = input.substring(8, 10) + '/' + input.substring(5, 7) + '/' + input.substring(0, 4) + input.substring(10);
         var data = moment(input).format('DD/MM/YYYY');
+        return data;
+    }
+}
+function diadasemana ($timeout) {
+    return function (input) {
+        if(!input || typeof(input) == 'object') return input;
+        moment.locale('pt-br');
+        var data = moment(input).format('dddd');
         return data;
     }
 }
@@ -98,4 +95,5 @@ angular
     .filter('fax', fax)
     .filter('cel', cel)
     .filter('data', data)
+    .filter('diadasemana', diadasemana)
     .filter('formata_data', formata_data)

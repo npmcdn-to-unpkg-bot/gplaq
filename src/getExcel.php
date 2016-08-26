@@ -125,4 +125,3 @@ function tabelaRotas()
 /*
  * Informe a função aqui *****
  */
-tabelaEnemInterior();

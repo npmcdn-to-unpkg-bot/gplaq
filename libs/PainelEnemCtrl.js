@@ -4,14 +4,22 @@
 angular.module('appcorreios')
     .controller('PainelEnemCtrl', function ($scope, $http, $anchorScroll, $interval, $state) {
 
-        $scope.total = 0;
-
         $scope.trocarCor = function (obj) {
             if(obj.total === obj.conferidos){
                 return 'verde';
             }
             else{
                 return'vermelho';
+            }
+
+        }
+
+        $scope.trocarCorDomingo = function (obj) {
+            if(obj.total === obj.conferidos){
+                return 'corazul';
+            }
+            else{
+                return '';
             }
 
         }
@@ -27,7 +35,8 @@ angular.module('appcorreios')
                 }
             }).then(function successCallback(response) {
                 if(response['data'] != 'null'){
-                    $scope.painel = response.data.painel;
+                    $scope.sabado = response.data.sabado;
+                    $scope.domingo = response.data.domingo;
                     // console.log(response.data.painel.length);
                     // $scope.total = $scope.painel.length;
                 }else{
