@@ -1,0 +1,58 @@
+<div id="page-wrapper" class="gray-bg {{$state.current.name}}">
+
+    <!-- Page wrapper -->
+    <div ng-include="'views/menu.html'"></div>
+
+    <!-- Main view  -->
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form>
+                    <div class="form-group">
+                        <label for="">Selecione a unidade:</label>
+                        <select name="unidade" class="form-control" ng-options="und as und.nomeunidade for und in unidades track by und.id" ng-model="unidade"></select>
+                    </div>
+                    <!--<div class="form-group">-->
+                        <!--<label for="">Selecione a unidade:</label>-->
+                        <!--<input type="number" name="valor" class="form-control" ng-model="valor">-->
+                        <!--<span>{{valor | currency:"R$"}}</span>-->
+                    <!--</div>-->
+                    <button class="btn btn-default" type="submit" ng-click="pesquisar(unidade)">Enviar</button>
+                </form>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <span>Quantidade de Objetos: {{quantidade}}</span>
+            </div>
+            <div class="panel-body">
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Codigo</th>
+                        <th>Unidade</th>
+                        <th>Recebido</th>
+                        <th>Data</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="obj in objetos | orderBy:'identificador.nomeunidade'" ng-class="primary"}}>
+                        <td>{{obj.id}}</td>
+                        <td>{{obj.codigo}}</td>
+                        <td>{{obj.identificador.nomeunidade}}</td>
+                        <td>{{obj.recebido}}</td>
+                        <td>{{obj.data_lancamento | formata_data}}</td>
+                    </tr>
+                    </tbody>
+
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <!--<div ng-include="'views/footer.html'"></div>-->
+
+</div>

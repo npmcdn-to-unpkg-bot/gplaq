@@ -1,0 +1,65 @@
+.logo{
+    height: 23px;
+}
+.rota{
+    /*fsdf*/
+    color: #2b0cc0;
+    font-size: 30px;
+}
+.verde {
+    border-style: double;
+    border-width: 2px;
+    background-color: #01E304;
+    height: 100px;
+    text-align: center;
+}
+.bloco {
+    border-style: double;
+    border-width: 2px;
+    height: 100px;
+}
+.vermelho {
+    border-style: double;
+    border-width: 2px;
+    background-color: #DE380B;
+    height: 100px;
+    text-align: center;
+}
+.vermelho div{
+    color: white;
+}
+.verde div{
+    color: #061f04;
+}
+.rotas {
+    font-size: 550px;
+    margin-bottom: -193px;
+}
+.destinatario{
+    font-size: 30px;
+}
+.corpo_ordem {
+    text-align: center;
+    font-size: 18px;
+    margin-top: -133px;
+    margin-bottom: 5px;
+}
+.texto_textearea {
+    text-align: right;
+    font-size: 20px;
+    font-family: cursive;
+}
+.corazul {
+    background-color: #32d20e;
+}
+.corvermelho {
+    background-color: #ebe500;
+}
+.colunadireita{
+    height: 280px;
+    overflow: auto;
+}
+#bottom {
+    display: block;
+    margin-top: 2000px;
+}

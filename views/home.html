@@ -1,0 +1,42 @@
+<div id="page-wrapper" class="gray-bg {{$state.current.name}}">
+
+    <!-- Page wrapper -->
+    <div ng-include="'views/menu.html'"></div>
+
+    <!-- Main view  -->
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <span>Quantidade de Objetos: {{quantidade}}</span>
+            </div>
+            <div class="panel-body">
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Codigo</th>
+                        <th>Unidade</th>
+                        <th>Recebido</th>
+                        <th>Data</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="obj in objetos">
+                        <td>{{obj.id}}</td>
+                        <td>{{obj.codigo}}</td>
+                        <td>{{obj.identificador.nomeunidade}}</td>
+                        <td>{{obj.recebido}}</td>
+                        <td>{{obj.data_lancamento | data}}</td>
+                    </tr>
+                    </tbody>
+
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <!--<div ng-include="'views/footer.html'"></div>-->
+
+</div>

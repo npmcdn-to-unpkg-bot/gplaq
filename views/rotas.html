@@ -1,0 +1,50 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3 col-lg-2">
+            <form action="">
+                <div class="form-group">
+                    <label for="">Codigo:</label>
+                    <input type="text" class="form-control" ng-model="codigo" ng-enter="envia(codigo)"
+                           focus-me="focus">
+                </div>
+            </form>
+            <div class="colunadireita">
+                <table class="table table-bordered">
+                    <tbody>
+                    <tr ng-repeat="cada in lista">
+                        <td ng-bind="cada.codigo"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <ul class="nav">
+                    <li>Conferidos: {{qtde()}}</li>
+                    <li>Restantes: {{restante}}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9 col-lg-10">
+            <div class="corpo_ordem" ng-class="mudarCor(enem.dataprevista)">
+                <div>
+                    <label for="">Rota:</label>
+                    <label ng-bind="enem.rota" class="rotas"></label>
+                </div>
+                <div>
+                    <label ng-bind="enem.destinatario" class="destinatario"></label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-1 bloco" ng-repeat="r in painel" ng-class="trocarCor(r)">
+                <div class="rota">{{r.rota}}</div>
+                <div>Total: {{r.total}}</div>
+                <div>Triado: {{r.conferidos}}</div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<!-- ng-class with current state name give you the ability to extended customization your view -->
+<div id="page-wrapper" class="gray-bg {{$state.current.name}}">
+
+    <!-- Page wrapper -->
+    <div ng-include="'views/menu.html'"></div>
+
+    <!-- Main view  -->
+    <div ui-view></div>
+
+    <!-- Footer -->
+    <div ng-include="'views/footer.html'"></div>
+
+</div>
