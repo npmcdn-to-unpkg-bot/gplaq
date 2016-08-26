@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ebe4a13-810c-46ad-acd6-b024270e9130" name="Default" comment="" />
+    <list default="true" id="4ebe4a13-810c-46ad-acd6-b024270e9130" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+    </list>
     <ignored path="site.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -52,18 +54,8 @@
       <file leaf-file-name="rotas.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/rotas.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="33" column="75" selection-start-line="33" selection-start-column="75" selection-end-line="33" selection-end-column="75" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libs/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="40" column="43" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="43" />
+            <state relative-caret-position="207">
+              <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -197,6 +189,7 @@
         <option value="$PROJECT_DIR$/src/EnemDAO.php" />
         <option value="$PROJECT_DIR$/libs/PainelEnemCtrl.js" />
         <option value="$PROJECT_DIR$/views/painelenem.html" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -421,15 +414,15 @@
       <workItem from="1471973985828" duration="8649000" />
       <workItem from="1472053156873" duration="17175000" />
       <workItem from="1472130584328" duration="7283000" />
-      <workItem from="1472220879996" duration="31000" />
+      <workItem from="1472220879996" duration="713000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139709000" />
+    <option name="totallyTimeSpent" value="140391000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1612" height="876" extended-state="0" />
+    <frame x="-8" y="-8" width="1612" height="876" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21491228" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -468,7 +461,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../sgaf_dev/api/src/rest/banco.php" />
     <entry file="file://$PROJECT_DIR$/../sgaf_dev/api/src/model/banco/BancoDAO.php" />
     <entry file="file://$PROJECT_DIR$/src/UnidadeDAO.php" />
     <entry file="file://$PROJECT_DIR$/vendor/gplac.sql" />
@@ -706,10 +698,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/rotas.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="33" column="75" selection-start-line="33" selection-start-column="75" selection-end-line="33" selection-end-column="75" />
+        <state relative-caret-position="207">
+          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
           <folding />
         </state>
       </provider>
