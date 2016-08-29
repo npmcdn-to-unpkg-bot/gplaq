@@ -30,16 +30,26 @@ angular.module('appcorreios', ['ui.router'])
                 templateUrl: 'views/baixa.html',
                 controller: 'baixaCtrl'
             })
-            .state('rotas', {
-                url: '/rotas',
+            .state('eneminterior', {
+                url: '/eneminterior',
                 templateUrl: 'views/rotas.html',
                 controller: 'enemCtrl'
+            })
+            .state('enemcapital', {
+                url: '/enemcapital',
+                templateUrl: 'views/enemcapital.html',
+                controller: 'enemCapitalCtrl'
+            })
+            .state('painelenemcapital', {
+                url: '/painelenemcapital',
+                templateUrl: 'views/painelenemcapital.html',
+                controller: 'PainelEnemCapitalCtrl'
             })
             .state('painelenem', {
                 url: '/painelenem',
                 templateUrl: 'views/painelenem.html',
                 controller: 'PainelEnemCtrl'
-            });;
+            });
         $urlRouterProvider.otherwise('/home');
     })
     .directive('ngEnter', function () {

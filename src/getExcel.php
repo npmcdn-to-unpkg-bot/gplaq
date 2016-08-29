@@ -3,7 +3,7 @@ include '../vendor/autoload.php';
 
 function tabelaEnem()
 {
-    $arquivo = fopen ('D:enem.csv', 'r');
+    $arquivo = fopen ('D:enemCapital2016.csv', 'r');
     $con = mysqli_connect("localhost","root","", "gplac");
 
     while(!feof($arquivo)) {
@@ -50,11 +50,12 @@ function tabelaEnemInterior()
 
             $dma = explode('/',$dados[1]);
 
-            $query = sprintf("INSERT INTO interior (codigo, dataprevista, codigoretorno, nomerota, destinatario, logradouro, bairro, cep, cidade, sabatina, provaespecial, peso) VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', %d)",
+            $query = sprintf("INSERT INTO interior (codigo, dataprevista, codigoretorno, rota, nomerota, destinatario, logradouro, bairro, cep, cidade, sabatina, provaespecial, peso) VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', %d)",
 
                 mysqli_real_escape_string($con, $dados[0]),
                 mysqli_real_escape_string($con, date($dma[2].'-'.$dma[1].'-'.$dma[0])),
                 mysqli_real_escape_string($con, $dados[2]),
+                mysqli_real_escape_string($con, $dados[3]),
                 mysqli_real_escape_string($con, $dados[4]),
                 mysqli_real_escape_string($con, $dados[5]),
                 mysqli_real_escape_string($con, $dados[6]),
@@ -125,3 +126,5 @@ function tabelaRotas()
 /*
  * Informe a função aqui *****
  */
+tabelaEnemInterior();
+//tabelaEnem();

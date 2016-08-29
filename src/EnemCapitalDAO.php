@@ -6,21 +6,21 @@
  * Time: 22:00
  */
 namespace GPLAC;
-class EnemDAO
+class EnemCapitalDAO
 {
     private $con;
     private $obj;
     private $lista;
     /**
-     * EnemDAO constructor
+     * EnemCapitalDAO constructor
      */
     public function __construct()
     {
         $this->con = Conexao::getInstance()->getConexao();
     }
-    function salvar(Enem $obj)
+    function salvar(EnemCapital $obj)
     {
-        $query = sprintf("INSERT INTO enem (codigo, dataprevista, rota, ordem, destinatario, logradouro, bairro, cidade, uf, sabatina, provaespecial) VALUES ('%s', '%s', '%s', %d, '%s', '%s', '%s', '%s', '%s', '%s', '%s')",
+        $query = sprintf("INSERT INTO capital (codigo, dataprevista, rota, ordem, destinatario, logradouro, bairro, cidade, uf, sabatina, provaespecial) VALUES ('%s', '%s', '%s', %d, '%s', '%s', '%s', '%s', '%s', '%s', '%s')",
             mysqli_real_escape_string($this->con, $obj->getCodigo()),
             mysqli_real_escape_string($this->con, $obj->getDataprevista()),
             mysqli_real_escape_string($this->con, $obj->getRota()),
@@ -41,7 +41,7 @@ class EnemDAO
 
     function mudarStatus($codigo)
     {
-        $query = sprintf("UPDATE interior SET status = 'TRIADO' WHERE codigo = '%s'",
+        $query = sprintf("UPDATE capital SET status = 'TRIADO' WHERE codigo = '%s'",
             mysqli_real_escape_string($this->con, $codigo)
 
         );
@@ -50,10 +50,10 @@ class EnemDAO
         }
     }
 
-    function buscarCodigo(Enem $enem)
+    function buscarCodigo(EnemCapital $enem)
     {
         $codigo = $enem->getCodigo();
-        $query = sprintf("SELECT * FROM interior WHERE codigo = '%s' AND status = 'PENDENTE'",
+        $query = sprintf("SELECT * FROM capital WHERE codigo = '%s' AND status = 'PENDENTE'",
 //
 //        $query = sprintf("call rotear('%s')",
             mysqli_real_escape_string($this->con, $codigo)
@@ -72,7 +72,7 @@ class EnemDAO
 
     function contarResto()
     {
-        $query = sprintf("SELECT * FROM interior WHERE status = 'PENDENTE'");
+        $query = sprintf("SELECT * FROM capital WHERE status = 'PENDENTE'");
         if(!mysqli_query($this->con, $query)) {
             die('[ERRO]: Class(Enem) | Metodo(contarResto) | Erro('.mysqli_error($this->con).')');
         }
@@ -84,23 +84,12 @@ class EnemDAO
     function gerarPainel($data)
     {
         
-//        $query = sprintf("SELECT * FROM pendentes");
-
-        $query = sprintf("call sp_contarRotas('%s')",
-            mysqli_real_escape_string($this->con, $data)
-        );
+        $query = sprintf("SELECT * FROM listarrotas");
 
         $result = mysqli_query($this->con, $query);
-//        if(!$result){
-//            die('[ERRO]: Class(Enem) | Metodo(gerarPainel) | Erro('.mysqli_error($this->con).')');
-//        }
+        while ($row = mysqli_fetch_assoc($result)) {
 
-        if (!mysqli_query($this->con, $query)) {
-            echo "CALL failed: (" . mysqli_errno . ") " . mysqli_error;
-        }
-        while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-
-            $sql = sprintf("select count(*) AS qtde from interior where rota = '%s'  AND status = 'TRIADO' AND dataprevista = '%s'",
+            $sql = sprintf("select count(*) AS qtde from capital where rota = '%s'  AND status = 'TRIADO' AND dataprevista = '%s'",
                 mysqli_real_escape_string($this->con, $row['rota']),
                 mysqli_real_escape_string($this->con, $data)
             );

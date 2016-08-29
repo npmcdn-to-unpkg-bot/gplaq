@@ -1,0 +1,20 @@
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-md-1 bloco" ng-repeat="sab in sabado" ng-class="trocarCor(sab)">
+            <div class="rota">{{sab.rota}}</div>
+            <div>Total: {{sab.total}}</div>
+            <div>Triado: {{sab.conferidos}}</div>
+
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-1 bloco" ng-repeat="dom in domingo" ng-class="trocarCorDomingo(dom)">
+            <div class="rota">{{dom.rota}}</div>
+            <div>Total: {{dom.total}}</div>
+            <div>Triado: {{dom.conferidos}}</div>
+
+        </div>
+    </div>
+</div>
