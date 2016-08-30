@@ -1,3 +1,6 @@
+.bodyenem{
+    margin-top: 10px;
+}
 .logo{
     height: 23px;
 }
@@ -5,6 +8,15 @@
     /*fsdf*/
     color: #2b0cc0;
     font-size: 30px;
+}
+.rotalabel{
+    font-size: 550px;
+    text-align: center;
+    margin-bottom: -133px;
+    margin-top: -88px;
+}
+.labelrota{
+    text-align: center;
 }
 .verde {
     border-style: double;
@@ -17,7 +29,6 @@
     border-style: double;
     border-width: 2px;
     height: 100px;
-    text-align: center;
 }
 .vermelho {
     border-style: double;
@@ -57,10 +68,6 @@
     background-color: #01E304;
 }
 .corvermelho {
-    border-style: double;
-    border-width: 2px;
-    height: 100px;
-    text-align: center;
     background-color: #ebe500;
 }
 .colunadireita{
@@ -71,3 +78,8 @@
     display: block;
     margin-top: 2000px;
 }
+.centro-home span{
+    text-align: center;
+    font-size: 214px;
+}
+
