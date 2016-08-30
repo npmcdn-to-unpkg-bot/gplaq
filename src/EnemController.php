@@ -52,8 +52,8 @@ class EnemController
         $enem->setCodigo($data['codigo']);
         $result = $this->dao->buscarCodigo($enem);
         $restante = $this->dao->contarResto();
-        $painel = $this->dao->gerarPainel('2016-11-05');
-        echo json_encode(array('result'=>$result,'restante'=>$restante, 'painel'=>$painel));
+//        $painel = $this->dao->gerarPainel('2016-11-05');
+        echo json_encode(array('result'=>$result,'restante'=>$restante));
     }
 
     function gerarPainel()

@@ -83,8 +83,14 @@ class EnemCapitalDAO
 
     function gerarPainel($data)
     {
+        $diadaprova = "";
+        if($data == '2016-11-05'){
+            $diadaprova = 'sabadocapital';
+        }else if($data == '2016-11-06'){
+            $diadaprova = 'domingocapital';
+        }
         
-        $query = sprintf("SELECT * FROM listarrotas");
+        $query = sprintf("SELECT * FROM $diadaprova");
 
         $result = mysqli_query($this->con, $query);
         while ($row = mysqli_fetch_assoc($result)) {

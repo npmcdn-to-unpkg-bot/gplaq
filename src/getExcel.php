@@ -126,5 +126,5 @@ function tabelaRotas()
 /*
  * Informe a função aqui *****
  */
-tabelaEnemInterior();
+//tabelaEnemInterior();
 //tabelaEnem();
