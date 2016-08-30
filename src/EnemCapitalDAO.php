@@ -53,8 +53,8 @@ class EnemCapitalDAO
     function buscarCodigo(EnemCapital $enem)
     {
         $codigo = $enem->getCodigo();
-        $query = sprintf("SELECT * FROM capital WHERE codigo = '%s' AND status = 'PENDENTE'",
-//
+//        $query = sprintf("SELECT * FROM capital WHERE codigo = '%s' AND status = 'PENDENTE'",
+            $query = sprintf("SELECT * FROM capital WHERE codigo = '%s'",
 //        $query = sprintf("call rotear('%s')",
             mysqli_real_escape_string($this->con, $codigo)
         );

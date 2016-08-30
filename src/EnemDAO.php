@@ -53,9 +53,8 @@ class EnemDAO
     function buscarCodigo(Enem $enem)
     {
         $codigo = $enem->getCodigo();
-        $query = sprintf("SELECT * FROM interior WHERE codigo = '%s' AND status = 'PENDENTE'",
-//
-//        $query = sprintf("call rotear('%s')",
+//        $query = sprintf("SELECT * FROM interior WHERE codigo = '%s' AND status = 'PENDENTE'",
+            $query = sprintf("SELECT * FROM interior WHERE codigo = '%s'",
             mysqli_real_escape_string($this->con, $codigo)
         );
         if(!mysqli_query($this->con, $query)) {

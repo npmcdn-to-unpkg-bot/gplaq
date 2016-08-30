@@ -17,6 +17,7 @@
     border-style: double;
     border-width: 2px;
     height: 100px;
+    text-align: center;
 }
 .vermelho {
     border-style: double;
@@ -56,6 +57,10 @@
     background-color: #01E304;
 }
 .corvermelho {
+    border-style: double;
+    border-width: 2px;
+    height: 100px;
+    text-align: center;
     background-color: #ebe500;
 }
 .colunadireita{

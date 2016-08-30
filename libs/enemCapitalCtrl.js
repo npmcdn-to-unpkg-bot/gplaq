@@ -49,7 +49,7 @@ angular.module('appcorreios')
                         $scope.lista.push(response.data.result);
                     }else{
                         delete $scope.enem;
-                        alert('Objeto já lançado ou não existe!');
+                        alert('Objeto não existe!');
                     }
                     delete $scope.codigo;
                     $scope.focus = true;

@@ -15,8 +15,8 @@ function tabelaEnem()
 
             $dma = explode('/',$dados[1]);
 
-            $query = sprintf("INSERT INTO enem (codigo, dataprevista, rota, ordem, destinatario, logradouro, bairro, cidade, uf, sabatina) VALUES ('%s', '%s', '%s', %d, '%s', '%s', '%s', '%s', '%s', '%s')",
-
+            $query = sprintf("INSERT INTO capital (codigo, dataprevista, codigoretorno, rota, ordem, destinatario, logradouro, bairro, cep, cidade, sabatina, provaespecial, peso) VALUES ('%s', '%s', '%s', '%s', %d, '%s', '%s', '%s', '%s', '%s', '%s', '%s', %d)",
+//            $query = sprintf("INSERT INTO capital (codigo, dataprevista, codigoretorno, rota, ordem, destinatario, logradouro, bairro, cep, cidade, sabatina, provaespecial) VALUES ('%s', '%s', '%s', '%s', %d, '%s', '%s', '%s', '%s', '%s', '%s', '%s')",
                 mysqli_real_escape_string($con, $dados[0]),
                 mysqli_real_escape_string($con, date($dma[2].'-'.$dma[1].'-'.$dma[0])),
                 mysqli_real_escape_string($con, $dados[2]),
@@ -26,8 +26,11 @@ function tabelaEnem()
                 mysqli_real_escape_string($con, $dados[6]),
                 mysqli_real_escape_string($con, $dados[7]),
                 mysqli_real_escape_string($con, $dados[8]),
-                mysqli_real_escape_string($con, $dados[9])
-//            mysqli_real_escape_string($con, $dados[10])
+                mysqli_real_escape_string($con, $dados[9]),
+                mysqli_real_escape_string($con, $dados[10]),
+                mysqli_real_escape_string($con, $dados[11]),
+                mysqli_real_escape_string($con, $dados[12])
+
             );
             mysqli_query($con, $query);
         }
@@ -127,4 +130,4 @@ function tabelaRotas()
  * Informe a função aqui *****
  */
 //tabelaEnemInterior();
-//tabelaEnem();
+tabelaEnem();

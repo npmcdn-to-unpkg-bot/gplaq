@@ -16,10 +16,10 @@ angular.module('appcorreios')
 
         $scope.trocarCorDomingo = function (obj) {
             if(obj.total === obj.conferidos){
-                return 'corazul';
+                return 'corvermelho';
             }
             else{
-                return '';
+                return 'bloco';
             }
 
         }
