@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ebe4a13-810c-46ad-acd6-b024270e9130" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/gplaq.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/PainelEnemCapitalCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/enemCapitalCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EnemCapital.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EnemCapitalController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EnemCapitalDAO.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/enemcapital.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/painelenemcapital.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/app.js" afterPath="$PROJECT_DIR$/libs/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/enemCtrl.js" afterPath="$PROJECT_DIR$/libs/enemCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EnemDAO.php" afterPath="$PROJECT_DIR$/src/EnemDAO.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/getExcel.php" afterPath="$PROJECT_DIR$/src/getExcel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/rotas.html" afterPath="$PROJECT_DIR$/views/rotas.html" />
-    </list>
+    <list default="true" id="4ebe4a13-810c-46ad-acd6-b024270e9130" name="Default" comment="" />
     <ignored path="site.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -467,16 +450,16 @@
       <workItem from="1472481616971" duration="1249000" />
       <workItem from="1472486693420" duration="261000" />
       <workItem from="1472487189430" duration="9568000" />
-      <workItem from="1472498229409" duration="4251000" />
+      <workItem from="1472498229409" duration="4329000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="165318000" />
+    <option name="totallyTimeSpent" value="165396000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.144375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
