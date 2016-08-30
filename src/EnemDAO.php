@@ -83,22 +83,18 @@ class EnemDAO
 
     function gerarPainel($data)
     {
-        
-//        $query = sprintf("SELECT * FROM pendentes");
+        $diadaprova = "";
+        if($data == '2016-11-05'){
+            $diadaprova = 'sabado';
+        }else if($data == '2016-11-06'){
+            $diadaprova = 'domingo';
+        }
 
-        $query = sprintf("call sp_contarRotas('%s')",
-            mysqli_real_escape_string($this->con, $data)
-        );
+        
+        $query = sprintf("SELECT * FROM $diadaprova");
 
         $result = mysqli_query($this->con, $query);
-//        if(!$result){
-//            die('[ERRO]: Class(Enem) | Metodo(gerarPainel) | Erro('.mysqli_error($this->con).')');
-//        }
-
-        if (!mysqli_query($this->con, $query)) {
-            echo "CALL failed: (" . mysqli_errno . ") " . mysqli_error;
-        }
-        while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+        while ($row = mysqli_fetch_assoc($result)) {
 
             $sql = sprintf("select count(*) AS qtde from interior where rota = '%s'  AND status = 'TRIADO' AND dataprevista = '%s'",
                 mysqli_real_escape_string($this->con, $row['rota']),
